@@ -25,20 +25,42 @@
         // Use ReactDOM.render() to show the JSX element inside the found HTML element.
         ReactDOM.render(jsxElement,rootElement);
 
+        // JSX element for the header part of the website
         const header = (
         <header>
             <h1>Welcome to my React Page</h1>
-            <h2>Getting Started React</h2>
-            <h3>JavaScript Library</h3>
+            <h2>hello Guyz</h2>
+            <h3>Flat FF7</h3>
             <p>Arham Nasir</p>
             <small>august 24, 2024</small>
         </header>
         );
 
-        ReactDOM.render(header,rootElement);
+        // JSX element for the main part of the website
+        const main = (
+            <main>
+                <p> This is the main body of my page. I hope you are fine. Hello Taimoor and Naveed </p>
+            </main> 
+        )
 
-        
+        // JSX element for the footer part of the website
+        const footer = (
+            <footer>
+                <p> Copyright 2024 for Naveed, (copy cat of linkupT...) stayaway fro my website</p>          
+            </footer>
+        )
 
+        // JSX element which contains all parts: header, main, footer
+        const app = (
+            <div>
+                {header}
+                {main}
+                {footer}
+            </div>
+         )
+
+        // Render the JSX element using ReactDOM
+        ReactDOM.render(app,rootElement);
     </script> 
 </body>
 </html>
