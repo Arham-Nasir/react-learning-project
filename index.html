@@ -4,6 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;       
+        }
+
+        html,
+        body {
+            height: 100%;
+            line-height:1.5;
+            font-family: 'montserrat';
+            font-weight: 300;
+            color:tan
+
+        }
+
+        .root{
+            min-height: 100%;
+            position: relative;
+        }
+
+        .header-wrapper,
+        .main-wrapper,
+        .footer-wrapper {
+            width: 85%;
+            margin: auto;
+        }
+
+        .header-wrapper,
+        .main-wrapper {
+            padding: 10px;
+            margin: 2px auto;
+        }
+
+        h1 {
+        font-size: 70px;
+        font-weight: 300;
+      }
+
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+
+      header {
+        background-color:teal;
+        padding: 20px;
+        text-align: center;
+        
+      }
+
+      main {
+        background: black;
+        padding: 10px;
+        /* padding-bottom: 60px; */
+        display: flex; /* Enables flexbox layout */
+        align-items: center; /* Vertically centers the content */
+        justify-content: center; /* Horizontally centers the content */
+        text-align: center; /* Centers text inside the footer */
+        min-height: 65vh; /* Ensures the main takes at least the full viewport height */
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 90px;
+        /* Height of the footer */
+        background-color: teal;
+        display: flex; /* Enables flexbox layout */
+        align-items: center; /* Vertically centers the content */
+        justify-content: center; /* Horizontally centers the content */
+        text-align: center; /* Centers text inside the footer */
+      }
+
+        
+
+
+
+
+    </style>
 </head>
 <body>
     <!-- This div will be where your React content gets rendered -->
@@ -25,52 +107,58 @@
         // Use ReactDOM.render() to show the JSX element inside the found HTML element.
         ReactDOM.render(jsxElement,rootElement);
 
-        const headerStyles= {
-            backgroundColor: '#3879b5',
-            fontFamily: 'Helvetica Neue',
-            fontColor: '#ffff',
-            padding: 25,
-            lineHeight: 1.5
-        }
+        // const headerStyles= {
+        //     backgroundColor: '#3879b5',
+        //     fontFamily: 'Helvetica Neue',
+        //     fontColor: '#ffff',
+        //     padding: 25,
+        //     lineHeight: 1.5
+        // }
 
         // JSX element for the header part of the website
         const header = (
-        <header style={headerStyles}>
-            <h1>Welcome to my React Page</h1>
-            <h2>hello Guyz</h2>
-            <h3>Flat FF7</h3>
-            <p>Arham Nasir</p>
-            <small>august 24, 2024</small>
+        <header>
+            <div classname= 'header-wrapper'>
+                <h1>Welcome to my React Page</h1>
+                <h2>hello Guyz</h2>
+                <h3>Flat FF7</h3>
+                <p>Arham Nasir</p>
+                <small>august 24, 2024</small>
+            </div>    
         </header>
         );
 
 
-        const mainStyle={
-            backgroundColor: '#F3F0F5',
+        // const mainStyle={
+        //     backgroundColor: '#F3F0F5',
     
-        }
+        // }
 
         // JSX element for the main part of the website
         const main = (
-            <main style = {mainStyle}>
-                <p> This is the main body of my page. I hope you are fine. Hello Taimoor and Naveed </p>
+            <main>
+                <div classname='main-wrapper' >
+                    <p> This is the main body of my page. I hope you are fine. Hello Taimoor and Naveed </p>
+                </div>
             </main> 
         )
 
-        const footerStyle={
-            backgroundColor: '#61DBFB',
-        }
+        // const footerStyle={
+        //     backgroundColor: '#61DBFB',
+        // }
 
         // JSX element for the footer part of the website
         const footer = (
-            <footer style = {footerStyle}>
-                <p> Copyright 2024 for Naveed, (copy cat of linkupT...) stayaway from my website</p>          
-            </footer>
+            <footer>
+                <div classname='footer-wrapper'>
+                    <p> Copyright 2024 for Naveed, (copy cat of linkupT...) stayaway from my website</p>          
+                </div>
+                    </footer>
         )
 
         // JSX element which contains all parts: header, main, footer
         const app = (
-            <div>
+            <div classname='app'>
                 {header}
                 {main}
                 {footer}
