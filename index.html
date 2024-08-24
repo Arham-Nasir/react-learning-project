@@ -15,6 +15,15 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- add babel for transpilation -->
-    <script type="text/babel"></script> 
+    <script type="text/babel">
+        // Get the root element
+        const rootElement = document.querySelector(".root");
+
+        // Create a JSX element
+        const jsxElement = <h1>I am a JSX element</h1>;
+
+        // Use ReactDOM.render() to show the JSX element inside the found HTML element.
+        ReactDOM.render(jsxElement,rootElement);
+    </script> 
 </body>
 </html>
